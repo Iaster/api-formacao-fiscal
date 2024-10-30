@@ -7,6 +7,7 @@ uses
 
 type
   IConfiguracoes = interface;
+  IEndereco = interface;
 
   ICertificado = interface
     function URL(Value: String): ICertificado; overload;
@@ -169,26 +170,36 @@ type
     function xFant: String; overload;
     function fone(Value: String): IEmitente; overload;
     function fone: String; overload;
-    function CEP(Value: Integer): IEmitente; overload;
-    function CEP: Integer; overload;
-    function xLgr(Value: String): IEmitente; overload;
-    function xLgr: String; overload;
-    function nro(Value: String): IEmitente; overload;
-    function nro: String; overload;
-    function xCpl(Value: String): IEmitente; overload;
-    function xCpl: String; overload;
-    function xBairro(Value: String): IEmitente; overload;
-    function xBairro: String; overload;
-    function xMun(Value: String): IEmitente; overload;
-    function xMun: String; overload;
-    function cMun(Value: Integer): IEmitente; overload;
-    function cMun: Integer; overload;
-    function UF(Value: String): IEmitente; overload;
-    function UF: String; overload;
     function IEST(Value: String): IEmitente; overload;
     function IEST: String; overload;
     function CRT(Value: String): IEmitente; overload;
     function CRT: String; overload;
+    function Endereco(Value: IEndereco): IEmitente; overload;
+    function Endereco: IEndereco; overload;
+  end;
+
+  IEndereco = interface
+    ['{F9CC2707-0CC0-4448-B00A-F9CBE6D58B18}']
+    function CEP(Value: Integer): IEndereco; overload;
+    function CEP: Integer; overload;
+    function xLgr(Value: String): IEndereco; overload;
+    function xLgr: String; overload;
+    function nro(Value: String): IEndereco; overload;
+    function nro: String; overload;
+    function xCpl(Value: String): IEndereco; overload;
+    function xCpl: String; overload;
+    function xBairro(Value: String): IEndereco; overload;
+    function xBairro: String; overload;
+    function xMun(Value: String): IEndereco; overload;
+    function xMun: String; overload;
+    function cMun(Value: Integer): IEndereco; overload;
+    function cMun: Integer; overload;
+    function UF(Value: String): IEndereco; overload;
+    function UF: String; overload;
+    function cPais(Value: Integer): IEndereco; overload;
+    function cPais: Integer; overload;
+    function xPais(Value: String): IEndereco; overload;
+    function xPais: String; overload;
   end;
 
   IFactoryModels = interface
