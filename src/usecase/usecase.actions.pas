@@ -50,8 +50,8 @@ begin
     Ide.tpNF := tnSaida;
     Ide.tpEmis := TpcnTipoEmissao(FFactory.Ide.tpEmis);
     Ide.tpAmb := TpcnTipoAmbiente(FFactory.Ide.tpAmb);
-    Ide.cUF := UFtoCUF(FFactory.Emitente.UF);
-    Ide.cMunFG := StrToInt(FFactory.Emitente.xMun);
+    Ide.cUF := UFtoCUF(FFactory.Emitente.Endereco.UF);
+    Ide.cMunFG := StrToInt(FFactory.Emitente.Endereco.xMun);
     Ide.finNFe := TpcnFinalidadeNFe(FFactory.Ide.finNFe);
     Ide.tpImp := tiNFCe;
     Ide.indFinal := cfConsumidorFinal;
@@ -64,16 +64,16 @@ begin
     Emit.xFant := FFactory.Emitente.xFant;
 
     Emit.EnderEmit.fone := FFactory.Emitente.fone;
-    Emit.EnderEmit.CEP := FFactory.Emitente.CEP;
-    Emit.EnderEmit.xLgr := FFactory.Emitente.xLgr;
-    Emit.EnderEmit.nro := FFactory.Emitente.nro;
-    Emit.EnderEmit.xCpl := FFactory.Emitente.xCpl;
-    Emit.EnderEmit.xBairro := FFactory.Emitente.xBairro;
-    Emit.EnderEmit.cMun := FFactory.Emitente.cMun;
-    Emit.EnderEmit.xMun := FFactory.Emitente.xMun;
-    Emit.EnderEmit.UF := FFactory.Emitente.UF;
-    Emit.EnderEmit.cPais := 1058;
-    Emit.EnderEmit.xPais := 'BRASIL';
+    Emit.EnderEmit.CEP := FFactory.Emitente.Endereco.CEP;
+    Emit.EnderEmit.xLgr := FFactory.Emitente.Endereco.xLgr;
+    Emit.EnderEmit.nro := FFactory.Emitente.Endereco.nro;
+    Emit.EnderEmit.xCpl := FFactory.Emitente.Endereco.xCpl;
+    Emit.EnderEmit.xBairro := FFactory.Emitente.Endereco.xBairro;
+    Emit.EnderEmit.cMun := FFactory.Emitente.Endereco.cMun;
+    Emit.EnderEmit.xMun := FFactory.Emitente.Endereco.xMun;
+    Emit.EnderEmit.UF := FFactory.Emitente.Endereco.UF;
+    Emit.EnderEmit.cPais := FFactory.Emitente.Endereco.cPais;
+    Emit.EnderEmit.xPais := FFactory.Emitente.Endereco.xPais;
     Emit.IEST := '';
     var Ok: Boolean;
     Emit.CRT := StrToCRT(Ok, IntToStr(FFactory.Emitente.CRT.ToInteger + 1));
